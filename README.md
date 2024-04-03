@@ -21,6 +21,7 @@ The business came with complaint that our client is not happy before Christmas. 
 reduce the number of tasks that needs to be done before you leave for vacation.
 
 * add validation to api layer, or at least make sure user cannot submit negative transaction value
+    - if this check is added then why check if account reminder in txn has reminder below 200 or 0?
 * fetching bank accounts takes too long, this may be due to fact that Subject is always fetched even when it's not
   needed in algorithm
 * client noticed that subject given name is never stored in database. Find out why and fix it without any change in API
