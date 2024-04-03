@@ -11,4 +11,4 @@ spring:
     username: ${embedded.postgresql.user}
 
 prefix-service:
-  version: v1
+  version: v2
