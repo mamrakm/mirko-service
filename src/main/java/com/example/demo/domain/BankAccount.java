@@ -13,6 +13,8 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -21,7 +23,7 @@ import java.math.BigDecimal;
 public class BankAccount {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = SEQUENCE)
     private Long id;
 
     private String prefix;
