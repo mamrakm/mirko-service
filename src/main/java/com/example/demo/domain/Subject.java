@@ -21,10 +21,15 @@ public class Subject {
   @GeneratedValue
   private Long id;
 
-  private String name;
-  private String lastName;
+    /**
+     * Column names are defined in accordance with migration.sql.
+     */
+    @Column(name = "name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
 
-  @OneToMany(mappedBy = "subject")
-  private List<BankAccount> accounts;
+    @OneToMany(mappedBy = "subject")
+    private List<BankAccount> accounts;
 
 }
