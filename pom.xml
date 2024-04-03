@@ -18,6 +18,7 @@
     <spring.cloud-version>2020.0.0</spring.cloud-version>
     <testcontainers.version>2.0.3</testcontainers.version>
     <org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
+    <lombok.version>1.18.30</lombok.version>
   </properties>
 
   <dependencyManagement>
@@ -28,6 +29,11 @@
         <version>${spring.cloud-version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
