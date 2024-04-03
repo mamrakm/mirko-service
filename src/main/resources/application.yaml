@@ -12,3 +12,9 @@ spring:
 
 prefix-service:
   version: v2
+
+logging:
+  level:
+    root:
+      - ERROR
+
