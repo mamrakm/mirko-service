@@ -1,11 +1,9 @@
 package com.example.demo.service;
 
 import com.example.demo.api.BankAccountResponse;
-import com.example.demo.api.SubjectResponse;
 import com.example.demo.domain.BankAccount;
 import com.example.demo.mapper.BankAccountMapper;
 import com.example.demo.repository.BankAccountRepository;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,7 +19,6 @@ public class BankAccountServiceImpl implements BankAccountService {
 
     private final BankAccountRepository bankAccountRepository;
     private final BankAccountMapper bankAccountMapper;
-    private final SubjectService subjectService;
 
     @Override
     @Transactional(readOnly = true)
@@ -29,6 +26,7 @@ public class BankAccountServiceImpl implements BankAccountService {
         return bankAccountRepository.findAll(pageable).map(bankAccountMapper::map);
     }
 
+    @Override
     @Transactional
     public void applyForLoan(Long subjectId) {
         Optional<BankAccount> bankAccount = bankAccountRepository.findBySubject_Id(subjectId);
