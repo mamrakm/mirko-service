@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/22-graal" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="EMBEDDED_POSTGRESQL_HOST" value="localhost" />
+      <env name="EMBEDDED_POSTGRESQL_PORT" value="5432" />
+      <env name="EMBEDDED_POSTGRESQL_SCHEMA" value="src/main/resources/migration.sql" />
+      <env name="POSTGRES_USER" value="postgres" />
+      <env name="POSTGRES_PASSWORD" value="postgres" />
+    </envs>
+    <module name="demo" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+    <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+      <option name="credential" />
+      <option name="region" />
+      <option name="useCurrentConnection" value="false" />
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
