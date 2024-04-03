@@ -4,10 +4,12 @@ import com.example.demo.api.BankAccountResponse;
 import com.example.demo.api.PostTransactionRequest;
 import com.example.demo.service.BankAccountService;
 import com.example.demo.service.TransactionService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,12 +32,14 @@ public class BankResource {
 
 
   @PostMapping("/{id}/transaction")
-  public ResponseEntity<Void> addTransaction(@PathVariable Long id, @RequestBody PostTransactionRequest request) {
-    transactionService.createTransaction(id, request);
+  public ResponseEntity<Void> addTransaction(@PathVariable Long id, @Valid @RequestBody PostTransactionRequest request, Errors errors) {
+    if (errors.hasErrors()) {
+      ResponseEntity.badRequest().build();
+    }
 
+    transactionService.createTransaction(id, request);
     return ResponseEntity.accepted().build();
   }
-
 
   @PostMapping("/{id}/transaction")
   public ResponseEntity<Void> applyForLoan(@PathVariable Long id) {
