@@ -12,6 +12,8 @@ import lombok.Setter;
 
 import java.util.List;
 
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -20,7 +22,7 @@ import java.util.List;
 public class Subject {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = SEQUENCE, generator = "account_sequence")
     private Long id;
 
     /**
