@@ -12,11 +12,11 @@ create table bank_accounts
     prefix  varchar(128)   not null,
     suffix  varchar(128)   not null,
     balance numeric(18, 2) not null,
+    apply_for_loan boolean not null,
     subject bigint,
     primary key (id),
     foreign key (subject) references subjects (id)
 );
-
 
 create table transactions
 (
@@ -29,3 +29,4 @@ create table transactions
 
 create sequence hibernate_sequence start with 500;
 create sequence account_sequence start with 1;
+
