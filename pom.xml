@@ -56,47 +56,24 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <scope>provided</scope>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>42.2.18</version>
-    </dependency>
-    <dependency>
-      <groupId>org.liquibase</groupId>
-      <artifactId>liquibase-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-openfeign</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.playtika.testcontainers</groupId>
-      <artifactId>embedded-postgresql</artifactId>
-      <version>${testcontainers.embedded.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-bootstrap</artifactId>
-      <version>3.0.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
-      <scope>test</scope>
-    </dependency>
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.12</version> <!-- Use the latest version available -->
+        </dependency>
+        <!-- Logback Classic Module -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.14</version> <!-- Use the latest version available -->
+        </dependency>
+        <!-- Logback Core Module (dependency of logback-classic, usually resolved automatically) -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.4.14</version> <!-- Use the same version as logback-classic -->
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -139,14 +116,6 @@
             <scope>test</scope>
         </dependency>
 
-    <!-- mac os specific fix for testcontainers https://github.com/testcontainers/testcontainers-java/issues/3834 -->
-    <dependency>
-      <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna</artifactId>
-      <version>5.13.0</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 
         <!-- mac os specific fix for testcontainers, see https://github.com/testcontainers/testcontainers-java/issues/3834 -->
         <dependency>
