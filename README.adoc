@@ -22,10 +22,6 @@ Portfolio project prototype
 18. rewrite with Spring WebFlux and reactive programming ❌
 19. Add Spring Security ❌
 
-<br/>.
-<br/>.
-<br/>
-<br/>.
 
 97. e-mail client
 98. ~~IRC~~ Discord bot

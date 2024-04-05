@@ -9,12 +9,12 @@ spring:
     url: jdbc:postgresql://${embedded.postgresql.host}:${embedded.postgresql.port}/${embedded.postgresql.schema}
     password: ${embedded.postgresql.password}
     username: ${embedded.postgresql.user}
-
+server:
+  port: 8082
 prefix-service:
   version: v2
-
 logging:
   level:
     root:
-      - ERROR
+      - INFO
 

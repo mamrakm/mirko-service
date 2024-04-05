@@ -12,15 +12,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - createTransaction method implementation
 - validation rejecting non positive values sent by client request
 - added lazy retrieval to subject field on BankAccount entity
--
+- CHANGELOG to show off how good I am knowing about semantic versionic and changelog format
+- conventional commits
 
 ### Fixed
 
+- my software is always flawless, not even tests are needed
 
 ### Changed
 
 - Java updated to version 22
 - Spring Boot updated to version 3.2.4
--
 
 ### Removed
