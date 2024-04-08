@@ -1,2 +1,4 @@
 .idea
 target
+demo.iml
+general*.log
