@@ -27,4 +27,7 @@ Portfolio project prototype
 98. ~~IRC~~ Discord bot
 99. something something AI
 
-
+```mermaid
+graph TD
+  A --> B
+```

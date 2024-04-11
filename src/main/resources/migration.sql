@@ -30,5 +30,5 @@ create table transactions
 create sequence hibernate_sequence start with 500;
 create sequence account_sequence start with 1;
 create sequence transaction_id_sequence start with 1;
-create sequence bankaccount_id_sequence start with 1;
+create sequence bank_account_id_sequence start with 1;
 
