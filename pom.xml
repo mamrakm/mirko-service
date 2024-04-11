@@ -8,8 +8,8 @@
         <version>3.2.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>cz.ememsoft</groupId>
+    <artifactId>mirko-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
@@ -83,7 +83,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.18</version>
+            <version>42.3.8</version>
         </dependency>
         <dependency>
             <groupId>org.liquibase</groupId>
@@ -119,14 +119,31 @@
             <artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <!--        <dependency>
+                    <groupId>org.springdoc</groupId>
+                    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                    <version>2.2.0</version>
+                </dependency>-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
         <!-- mac os specific fix for testcontainers, see https://github.com/testcontainers/testcontainers-java/issues/3834 -->
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>5.13.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
@@ -174,6 +191,32 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
+            <!--            <plugin>
+                            <groupId>org.openapitools</groupId>
+                            <artifactId>openapi-generator-maven-plugin</artifactId>
+                            <version>7.1.0</version>
+                            <executions>
+                                <execution>
+                                    <goals>
+                                        <goal>generate</goal>
+                                    </goals>
+                                    <configuration>
+                                        <inputSpec>
+                                            ${project.basedir}/src/main/resources/petstore.yml
+                                        </inputSpec>
+                                        <generatorName>spring</generatorName>
+                                        <apiPackage>com.baeldung.openapi.api</apiPackage>
+                                        <modelPackage>com.baeldung.openapi.model</modelPackage>
+                                        <supportingFilesToGenerate>
+                                            ApiUtil.java
+                                        </supportingFilesToGenerate>
+                                        <configOptions>
+                                            <delegatePattern>true</delegatePattern>
+                                        </configOptions>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>-->
         </plugins>
     </build>
 </project>
