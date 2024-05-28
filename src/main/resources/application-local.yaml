@@ -6,9 +6,9 @@ spring:
     hibernate:
       ddl-auto: validate
   datasource:
-    url: jdbc:postgresql://${embedded.postgresql.host}:${embedded.postgresql.port}/${embedded.postgresql.schema}
-    password: ${embedded.postgresql.password}
-    username: ${embedded.postgresql.user}
+    url: jdbc:postgresql://localhost:5432/db1
+    password: postgres
+    username: postgres
 server:
   port: 8082
 prefix-service:
